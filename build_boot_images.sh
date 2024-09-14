@@ -30,3 +30,19 @@ mkbootimg --kernel ./ImageResources/Angler/Image.gz-dtb \
   --ramdisk_offset 0x02000000 \
   --tags_offset 0x01e00000 \
   -o ./ImageResources/Angler/uefi.img
+ 
+ 
+cat ./BootShim/BootShim.bin ./Build/LGG4-AARCH64/DEBUG_CLANG38/FV/MSM8992_EFI.fd > ./ImageResources/F500/bootpayload.bin
+
+gzip -c < ./ImageResources/F500/bootpayload.bin >./ImageResources/F500/bootpayload.bin.gz
+
+dtc -I dts -O dtb ./ImageResources/F500/F500.dts -o ./ImageResources/F500/F500.dtb
+
+cat ./ImageResources/F500/bootpayload.bin.gz ./ImageResources/F500/F500.dtb >> ./ImageResources/F500/Image.gz-dtb
+
+mkbootimg --kernel ./ImageResources/F500/Image.gz-dtb \
+  --ramdisk ./ImageResources/ramdisk-null \
+  --base 0x00000000 --pagesize 4096 \
+  --ramdisk_offset 0x02000000 \
+  --tags_offset 0x01e00000 \
+  -o ./ImageResources/F500/uefi.img
