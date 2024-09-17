@@ -119,8 +119,8 @@ READ_LOCK_STATUS   = TRUE
   INF QcomPkg/Driver/RuntimeMemoryConfigDxe/RuntimeMemoryConfigDxe.inf
 
   # Device Drivers
-  INF QcomPkg/Driver/SynapticsTouchDxe/SynapticsTouchDevice.inf
-  INF QcomPkg/Driver/SynapticsTouchDxe/SynapticsTouchDxe.inf
+  # INF QcomPkg/Driver/SynapticsTouchDxe/SynapticsTouchDevice.inf
+  # INF QcomPkg/Driver/SynapticsTouchDxe/SynapticsTouchDxe.inf
 
   # Debug heartbeat
 !if $(SEND_HEARTBEAT_TO_SERIAL) == 1
@@ -149,7 +149,7 @@ READ_LOCK_STATUS   = TRUE
   # Graphics
   INF NexusFamilyPkg/Driver/SimpleFbDxe/SimpleFbDxe.inf
 
-  INF QcomPkg/GPLDriver/QupSpiDxe/QupSpiDxe.inf
+  # INF QcomPkg/GPLDriver/QupSpiDxe/QupSpiDxe.inf
 
   # BDS
   INF MdeModulePkg/Universal/PrintDxe/PrintDxe.inf
@@ -182,14 +182,14 @@ READ_LOCK_STATUS   = TRUE
   INF NexusFamilyPkg/Driver/SmBiosTableDxe/SmBiosTableDxe.inf
 
   # ACPI Tables
-  !include Nexus5XPkg/Include/ACPI.inc
+  !include LGG4Pkg/Include/ACPI.inc
 
   INF MdeModulePkg/Universal/EsrtFmpDxe/EsrtFmpDxe.inf
 
   !include NexusFamilyPkg/Frontpage.fdf.inc
 
   FILE FREEFORM = PCD(gMsCorePkgTokenSpaceGuid.PcdRegulatoryGraphicFileGuid) {
-    SECTION RAW = Nexus5XPkg/Include/Resources/RegulatoryLogos.png
+    SECTION RAW = LGG4Pkg/Include/Resources/RegulatoryLogos.png
   }
 
   # INF NexusFamilyPkg/UFP/ufpdevicefw.inf

@@ -26,8 +26,8 @@
   FLASH_DEFINITION               = LGG4Pkg/LGG4.fdf
   SECURE_BOOT_ENABLE             = 1
   USE_PHYSICAL_TIMER             = 1
-  USE_SCREEN_FOR_SERIAL_OUTPUT   = 0
-  USE_MEMORY_FOR_SERIAL_OUTPUT   = 0
+  USE_SCREEN_FOR_SERIAL_OUTPUT   = 1
+  USE_MEMORY_FOR_SERIAL_OUTPUT   = 1
   SEND_HEARTBEAT_TO_SERIAL       = 0
   MEMORY_3GB                     = 1
 
@@ -47,7 +47,7 @@
   # Simple FrameBuffer
   gNexusFamilyPkgTokenSpaceGuid.PcdMipiFrameBufferWidth|1440
   gNexusFamilyPkgTokenSpaceGuid.PcdMipiFrameBufferHeight|2560
-  gNexusFamilyPkgTokenSpaceGuid.PcdMipiFrameBufferPixelBpp|32
+    gNexusFamilyPkgTokenSpaceGuid.PcdMipiFrameBufferPixelBpp|32
 
 [PcdsDynamicDefault.common]
   gEfiMdeModulePkgTokenSpaceGuid.PcdVideoHorizontalResolution|1440
@@ -58,6 +58,8 @@
   gEfiMdeModulePkgTokenSpaceGuid.PcdSetupConOutColumn|120
   gEfiMdeModulePkgTokenSpaceGuid.PcdConOutRow|160
   gEfiMdeModulePkgTokenSpaceGuid.PcdConOutColumn|120
+  gNexusFamilyPkgTokenSpaceGuid.PcdMipiFrameBufferAddress|0x3400000
+  
 
 !include QcomPkg/QcomPkg.dsc.inc
 !include NexusFamilyPkg/NexusFamily.dsc.inc
