@@ -27,7 +27,7 @@
   SECURE_BOOT_ENABLE             = 1
   USE_PHYSICAL_TIMER             = 1
   USE_SCREEN_FOR_SERIAL_OUTPUT   = 1
-  USE_MEMORY_FOR_SERIAL_OUTPUT   = 1
+  USE_MEMORY_FOR_SERIAL_OUTPUT   = 0
   SEND_HEARTBEAT_TO_SERIAL       = 0
   MEMORY_3GB                     = 1
 
@@ -45,9 +45,10 @@
   gNexusFamilyPkgTokenSpaceGuid.PcdSmbiosBoardModel|"LG G4"
 
   # Simple FrameBuffer
+  gNexusFamilyPkgTokenSpaceGuid.PcdMipiFrameBufferAddress|0x3400000
   gNexusFamilyPkgTokenSpaceGuid.PcdMipiFrameBufferWidth|1440
   gNexusFamilyPkgTokenSpaceGuid.PcdMipiFrameBufferHeight|2560
-    gNexusFamilyPkgTokenSpaceGuid.PcdMipiFrameBufferPixelBpp|32
+  gNexusFamilyPkgTokenSpaceGuid.PcdMipiFrameBufferPixelBpp|32
 
 [PcdsDynamicDefault.common]
   gEfiMdeModulePkgTokenSpaceGuid.PcdVideoHorizontalResolution|1440
@@ -56,10 +57,6 @@
   gEfiMdeModulePkgTokenSpaceGuid.PcdSetupVideoVerticalResolution|2560
   gEfiMdeModulePkgTokenSpaceGuid.PcdSetupConOutRow|160
   gEfiMdeModulePkgTokenSpaceGuid.PcdSetupConOutColumn|120
-  gEfiMdeModulePkgTokenSpaceGuid.PcdConOutRow|160
-  gEfiMdeModulePkgTokenSpaceGuid.PcdConOutColumn|120
-  gNexusFamilyPkgTokenSpaceGuid.PcdMipiFrameBufferAddress|0x3400000
-  
 
 !include QcomPkg/QcomPkg.dsc.inc
 !include NexusFamilyPkg/NexusFamily.dsc.inc

@@ -43,6 +43,7 @@ cat ./ImageResources/F500/bootpayload.bin.gz ./ImageResources/F500/F500.dtb >> .
 mkbootimg --kernel ./ImageResources/F500/Image.gz-dtb \
   --ramdisk ./ImageResources/ramdisk-null \
   --base 0x00000000 --pagesize 4096 \
-  --ramdisk_offset 0x02000000 \
-  --tags_offset 0x01e00000 \
+  --ramdisk_offset 0x01000000 \
+  --kernel_offset 0x00008000 \
+  --tags_offset 0x00000100 \
   -o ./ImageResources/F500/uefi.img
