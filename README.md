@@ -1,15 +1,14 @@
-# [Project Mu](https://microsoft.github.io/mu/) UEFI Implementation for Nexus 5X and 6P
+# [Project Mu](https://microsoft.github.io/mu/) UEFI Implementation for LG G4
 
 ## Description
 
-This repository hosts the code and underlying work behind the Windows UEFI firmware "bootstrapper" for Nexus 5X and Nexus 6P.
+This repository hosts the code and underlying work behind the Windows UEFI firmware "bootstrapper" for LG G4.
 
 ## Compatibility
 
 | Device Name | Codenames/Internal Names | UEFI Port Status | Windows Bootability Status |
 |---------------|--------------------------|------------------|----------------------------|
-| Huawei Nexus 6P  | Angler | ✅ | ✅ |
-| LG Nexus 5X | Bullhead | ✅ | ⚠️* |
+| LG G4 | Bullhead | ✅ | ⚠️* |
 
 *Only EMMC and framebuffer will work in Windows currently, ACPI tables need adjustemnts.
 
@@ -38,8 +37,7 @@ This repository hosts the code and underlying work behind the Windows UEFI firmw
 ```
 # Build UEFI
 pip install --upgrade -r pip-requirements.txt
-./build_uefi_angler.sh
-./build_uefi_bullhead.sh
+./build_uefi_F500.sh
 ./build_boot_shim.sh
 
 # Generate boot image
