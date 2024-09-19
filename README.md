@@ -8,7 +8,7 @@ This repository hosts the code and underlying work behind the Windows UEFI firmw
 
 | Device Name | Codenames/Internal Names | UEFI Port Status | Windows Bootability Status |
 |---------------|--------------------------|------------------|----------------------------|
-| LG G4 | Bullhead | ✅ | ⚠️* |
+| LG G4 | F500 | ❌ | ❌* |
 
 *Only EMMC and framebuffer will work in Windows currently, ACPI tables need adjustemnts.
 
